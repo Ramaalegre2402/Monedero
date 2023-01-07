@@ -1,4 +1,58 @@
+:root{
+/*colores dia*/--positivoDia:#3C6B26;--negativoDia:#d32e2e; --textoDia:#333333; --fondoDia:#1d2db4;
+/*colores noche*/--positivoNoche:#3c9414;--negativoNoche:#c52a2a;--textoNoche:#f2f2f2;--fondoNoche:#ffffff;
+}
+
 *{
     max-height: 100vh;
-    max-width: 100vh;
+    font-family: 'outfit';
+}
+body{
+    background-color: #f2f2f2;
+    max-height: 100vh;
+    
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+
+.sal{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1d2db4;
+    color:#f2f2f2;
+    height: 175px;
+    margin-bottom: -40px;
+    padding-bottom: 20px;
+    border-radius: 16px ;
+}
+.sal>h1{
+    color:#3c9414;
+}
+
+.totales{
+    display:flex;
+    justify-content:space-around;
+    background-color: #ffffff;
+    border-radius: 16px;
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+
+section{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.gas{
+   
+    flex-basis: 50%;
+    height:50vh;
 }
