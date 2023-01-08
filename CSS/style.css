@@ -1,14 +1,18 @@
 :root{
-/*colores dia*/--positivoDia:#3C6B26;--negativoDia:#d32e2e; --textoDia:#333333; --fondoDia:#1d2db4;
-/*colores noche*/--positivoNoche:#3c9414;--negativoNoche:#c52a2a;--textoNoche:#f2f2f2;--fondoNoche:#ffffff;
+/*colores dia*/--positivoDia:#3C6B26;--negativoDia:#d32e2e; --textoDia:#F4F5FF; --fondoDia:#1d2db4;
+/*colores noche*/--positivoNoche:#3c9414;--negativoNoche:#c52a2a;--textoNoche:#333333;--fondoNoche:#ffffff;
+
 }
 
 *{
     max-height: 100vh;
     font-family: 'outfit';
+    overflow: hidden;
+
 }
+
 body{
-    background-color: #f2f2f2;
+    background-color:var(--textoDia);
     max-height: 100vh;
     
 }
@@ -19,26 +23,34 @@ header{
     
 }
 
-
 .sal{
     display:flex;
     align-items: center;
     flex-direction: column;
-    background-color: #1d2db4;
-    color:#f2f2f2;
+    background-color: var(--fondoDia);
+    color:var(--textoDia);
     height: 175px;
     margin-bottom: -40px;
     padding-bottom: 20px;
     border-radius: 16px ;
+
 }
+
+.sal>p{
+    margin-top: 25px;
+    margin-bottom: 3px;
+
+}
+
 .sal>h1{
-    color:#3c9414;
+    color:var(--positivoNoche);
+
 }
 
 .totales{
     display:flex;
     justify-content:space-around;
-    background-color: #ffffff;
+    background-color: var(--fondoNoche);
     border-radius: 16px;
     margin-left: 15%;
     margin-right: 15%;
@@ -49,10 +61,240 @@ section{
     display:flex;
     align-items: center;
     justify-content:space-around;
+
+}
+
+.ingre{
+    background-color: var(--fondoNoche);
+    flex-basis: 50%;
+    height:47vh;
+    margin: 9px;
+    border-radius: 16px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+#ingreseDinero{
+    width: 66%;
+    margin-bottom: 16px;   
+
+}
+
+.btnI{
+    height: 70%;
+    border:none;
+    background-color: #D1FBCF;
+    color:var(--positivoDia);
+    border-radius: 30px;
+
+}
+.btnI2{
+    display:none;
+}
+
+.btnI:hover{
+    cursor: pointer;
+
+}
+
+.btnI:active{
+    background-color: #68a565;
+
+}
+
+.TMG{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-top: 16px;
+    width: 100%; 
+
+}
+
+.TMG>input{
+    width:30%;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    border:1px solid;
+    border-radius: 5px;  
+
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    appearance: none;
+
+}
+
+.btnG{
+    height: 70%;
+    border:none;
+    background-color: #FDDFDF;
+    color:var(--negativoDia);
+    border-radius: 30px;   
+}
+.btnG2{
+    display:none;
+}
+
+.btnG:hover{
+    cursor: pointer;
+}
+
+.btnG:active{
+    background-color: #be8d8d;
 }
 
 .gas{
-   
+    background-color: var(--fondoNoche);
     flex-basis: 50%;
-    height:50vh;
+    height:47vh;
+    margin: 9px;
+    border-radius: 16px;   
 }
+
+.gas>p{
+    margin-top: 5%;
+    margin-left: 45%;
+    font-weight: bolder;
+
+}
+
+.gas>div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1rem;
+
+}
+li::first-letter{
+    text-transform: uppercase;
+}
+    
+
+
+.basura{
+    padding-top: 20px;
+    color:var(--negativoNoche)
+
+}
+
+@media(orientation:landscape){
+*{
+    overflow-y: visible;
+    
+}
+}
+@media(max-width:700px){
+
+    *{
+        overflow-y: visible;
+        
+    }
+    
+    
+
+    .sal{
+        height: 135px;
+    }
+
+    .sal>p{
+        margin-top: 20px;
+        margin-bottom: 1px;
+    }
+
+    .totales{
+        height: 120px;
+        width:86% ;
+        margin-left: 7%;
+
+    }
+    .totales>p{
+        margin-top: 20px;
+        margin-bottom: 1px;
+
+    }
+    .totales>h1{
+        margin-top: 8px;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+   .ingre{
+        width: 86%;
+    }
+
+    #ingreseDinero{
+        width: 56%;
+    }
+    .btnI{
+        display:none;
+    }
+    .btnI2{
+        display:initial;
+        border:none;
+        background-color: #D1FBCF;
+        color:var(--positivoDia);
+        height: 30px;
+        width: 80px;
+        border-radius:30px;
+        
+    }
+    .suma{
+        font-size: larger;
+        
+    }
+    .btnI2:hover{
+        cursor:pointer;
+    }
+    .btnI2:active{
+        background-color: #68a565;
+    }
+
+    .TMG>input{
+        width:23%;
+
+    }
+    .btnG{
+        display:none;
+    }
+    .btnG2{
+        display:initial;
+        border:none;
+        background-color: #FDDFDF;
+        color:var(--negativoDia);
+        height: 30px;
+        width: 80px;
+        border-radius:30px;
+
+    }
+
+    .resta{
+        font-size: larger;
+        
+    }
+    .btnG2:hover{
+        cursor:pointer;
+    }
+    .btnG2:active{
+        background-color:#be8d8d ;
+    }
+
+    .gas{
+        width: 86%;
+
+    }
+    .gas>p{
+        margin-bottom: 7px;
+    }
+
+}
+
+    
